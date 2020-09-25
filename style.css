@@ -6,7 +6,18 @@
 body {
     background-color: rgba(218, 218, 218, 0.87);
     color: rgb(53, 53, 53);
-    text-align: center;
+    margin: 0;
+}
+
+body #container {
+    width: 80%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+}
+
+body #intro {
+    width: 300px;
 }
 
 button {
@@ -16,12 +27,12 @@ button {
     background: none;
 }
 
-img {
+body img {
     border-radius: 5px;
 }
 
 p {
-    text-align: left;
+    text-align: center;
     font-size: 16px;
 }
 
@@ -30,6 +41,17 @@ p {
     color: rgba(218, 218, 218, 0.87);
 }
 
-#footer {
-    text-align: left;
+#buttons,
+footer {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(53, 53, 53);
+}
+
+.hide {
+    display: none;
 }

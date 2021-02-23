@@ -1,0 +1,55 @@
+body{
+    background-color: #1e1e1e;
+    color: #00F3E5;
+    margin: 0;
+}
+
+div#container header img{
+    width: 100%;
+}
+
+#container{
+    width: 80%;
+    max-width: 980px;
+    margin: 40px auto;
+
+    display: flex;
+}
+
+#intro{
+    width: 400px;
+    margin-right: 20px;
+}
+
+main{
+    margin: 32px 0;
+}
+
+#buttons{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-around;    
+}
+
+button{
+    border: none;
+    background: none;
+    color: #00F3E5;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+button:hover{
+    filter: brightness(0.8);
+}
+
+button.fat{
+    color: #1e1e1e;
+    background-color: #00F3E5;
+}
+
+footer{
+    text-align: center;   
+}

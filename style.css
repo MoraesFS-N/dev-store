@@ -1,23 +1,35 @@
+
+
 body{
     background-color: #1e1e1e;
     color: #00F3E5;
     margin: 0;
+    font-family: 'Poppins';
 }
+
 
 div#container header img{
     width: 100%;
 }
 
+p, .description{
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+
 #container{
     width: 80%;
-    max-width: 980px;
+    max-width: 990px;
     margin: 40px auto;
 
     display: flex;
 }
 
 #intro{
-    width: 400px;
+    width: 500px;
     margin-right: 20px;
 }
 
@@ -25,10 +37,15 @@ main{
     margin: 32px 0;
 }
 
+main p{
+    text-align: justify
+}
+
 #buttons{
     display: flex;
     margin-bottom: 20px;
-    justify-content: space-around;    
+    justify-content: space-around;  
+      
 }
 
 button{
@@ -39,6 +56,10 @@ button{
     outline: none;
     cursor: pointer;
     transition: 400ms;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
 }
 
 button:hover{
@@ -46,10 +67,167 @@ button:hover{
 }
 
 button.fat{
-    color: #1e1e1e;
+    color: #353535;
     background-color: #00F3E5;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgb(114, 113, 113);
 }
 
 footer{
     text-align: center;   
+
+    font-size: 14px;
+    font-weight: regular;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    
+}
+
+#last-ideas{
+    width: 900px;
+}
+
+.idea{
+    display: flex;
+    background-color: rgb(73, 73, 73);
+    
+    box-shadow: 0 4px 16px -8px rgb(163, 163, 163);
+
+    margin-bottom: 32px;
+    padding: 32px;
+
+    border-radius: 8px;
+}
+
+.idea img{
+    width: 60px;
+    height: 60px;
+
+    margin-right: 32px;
+}
+
+.idea h3{
+    margin: 0;
+}
+
+.idea p{
+    margin: 8px 0;
+    color: #17e9deb7;
+}
+
+.idea .decription{
+    margin: 16px 0;
+
+}
+
+/* Css do Modal de ideia*/
+#modal{
+    background-color: #00F3E5;
+    color: #1e1e1e;
+    
+    position: absolute;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    transition: all 400ms;
+}
+
+
+#modal .content{
+    margin-top: 10px;
+}
+
+#modal .content h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form{
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    grid-column: span 2;
+}
+
+
+form label{
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form input,
+form textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form button{
+    background-color: #1e1e1e;
+    color: #00F3E5;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 5px;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    grid-column: 2;
+    justify-self: end;
+
+    font-size: 16px;
+    font-weight: 300;
+}
+
+form a{
+    width: 150px;
+    height: 40px;
+    
+    text-decoration: none;
+    color: #00F3E5;
+    transition: 400ms;
+    background-color: #1e1e1e;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+form a:hover{
+    color: #1e1e1e;
+    background-color: #00F3E5;
+}   
+
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
 }

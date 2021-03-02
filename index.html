@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Ideas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
+
 
 <body>
 
@@ -30,7 +33,7 @@
 
             <section id="buttons">
         
-                <button>+ Adicionar Ideia</button>
+                <button onclick="onOff()">+ Adicionar Ideia</button>
                 <button class="fat">Ver Ideias</button>
 
             </section>
@@ -41,7 +44,7 @@
     
         <section id="last-ideas">
             <div class="idea">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953446.svg?token=exp=1614118983~hmac=b119ba792ae71a7a2b1d14bdbac123a8" alt="">
+                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953446.svg?token=exp=1614633817~hmac=06afcb0e40166d8f894c3aaf2de0b95d" alt="">
                 <div class="content">
                     <h3>Cursos de recuperação de dados</h3>
                     <p>Estudo</p>
@@ -52,7 +55,7 @@
                 </div>
             </div>
             <div class="idea">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953238.svg?token=exp=1614118983~hmac=12e8a599898987f7ffb82588774ff81a" alt="">
+                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953238.svg?token=exp=1614633817~hmac=be5e9fde81cfbed52b68ad4021164574" alt="">
                 <div class="content">
                     <h3>Firewall</h3>
                     <p>Estudo</p>
@@ -63,7 +66,7 @@
                 </div>
             </div>
             <div class="idea">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953382.svg?token=exp=1614118983~hmac=3ba0daac4c02f8baf67238467114a386" alt="">
+                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953480.svg?token=exp=1614633817~hmac=4acac509fcbbdd0248171696457a3de3" alt="">
                 <div class="content">
                     <h3>Backup em Nuvem</h3>
                     <p>Estudo</p>
@@ -78,8 +81,48 @@
     </div>
     
     
+    <!--Modal-->
+    <div id="modal" class="hide">
+        <div class="content">
+            <h1>Nova Ideia</h1>
+            <form action="">
+                
+                <div class="input-wrapper">
+                    <label for="title">Título da Ideia</label>
+                    <input type="text" name="title" id="title">
+                </div>
 
+                <div class="input-wrapper">
+                    <label for="category">Categoria</label>
+                    <input type="text" name="category" id="category">
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="image">Link da Imagem</label>
+                    <input type="url" name="image" id="image">
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="description">Digite uma descrição para esta Ideia</label>
+                    <textarea type="text" name="description" cols="30" rows="10"></textarea>
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="link">Link da Ideia</label>
+                    <input type="url" name="link" id="link">  
+                </div>
+                
+                <a href="#" onclick="onOff()"> Voltar</a>
+
+                <button>Salvar</button>
+            
+            </form>
+        </div>
+    </div>
     
+    
+
+
     <script src="scrips.js"></script>
 </body>
 </html>

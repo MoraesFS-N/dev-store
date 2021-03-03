@@ -3,8 +3,12 @@
 body{
     background-color: #1e1e1e;
     color: #00F3E5;
-    margin: 0;
+    margin: 0 auto;
     font-family: 'Poppins';
+}
+
+body.hideScroll{
+    overflow: hidden;
 }
 
 
@@ -21,16 +25,16 @@ p, .description{
 
 
 #container{
-    width: 80%;
+    width: 90%;
     max-width: 990px;
-    margin: 40px auto;
+    margin: 30px auto;
 
     display: flex;
 }
 
 #intro{
     width: 500px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 main{
@@ -62,19 +66,31 @@ button{
     letter-spacing: 0.2px;
 }
 
-button:hover{
-    filter: brightness(0.8);
-}
-
-button.fat{
+.fat{
     color: #353535;
     background-color: #00F3E5;
 
     width: 150px;
     height: 40px;
 
+    font-weight: 600;
+
     border-radius: 5px;
     box-shadow: 0px 2px 6px rgb(114, 113, 113);
+}
+
+a.fat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+a:hover{
+    filter: brightness(0.8);
 }
 
 footer{
@@ -131,9 +147,9 @@ footer{
     
     position: absolute;
     top: 0;
-
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
 
     display: flex;
     justify-content: center;
@@ -141,6 +157,9 @@ footer{
     transition: all 400ms;
 }
 
+#modal.addScroll{
+    overflow: auto;
+}
 
 #modal .content{
     margin-top: 10px;
@@ -230,4 +249,92 @@ form a:hover{
 #modal.hide{
     opacity: 0;
     visibility: hidden;
+}
+
+/* HTML da ideia*/
+
+#page-ideas #container{
+    display: block;
+}
+
+
+#page-ideas header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+
+    height: 80px;
+}
+
+#page-ideas nav{
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas nav li{
+    margin-right: 20px;
+    list-style-type: none;
+}
+
+#page-ideas nav li a{
+    text-decoration: none;
+    color: #00F3E5;
+}
+
+#page-ideas nav li:last-child{
+    margin: 0;
+    transition: 400ms;
+}
+
+#page-ideas nav li:last-child:hover{
+    filter: brightness(0.5);
+}
+
+
+#page-ideas nav li:last-child a{
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    background-color: #00F3E5;
+    border-radius: 5px;
+    color: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section#title{
+    text-align: center;
+    margin: 32px 0;
+}
+
+section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1{
+    margin: 0;
+    font-size: 28px;
+}
+
+section#ideas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+section#ideas .idea{
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer{
+    margin-top: 64px;
 }

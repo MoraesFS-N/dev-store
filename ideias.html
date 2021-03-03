@@ -1,48 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Ideas</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
-
-
-<body>
-
+<body id="page-ideas"> 
     <div id="container">
+            
+    <header>
+        <img src="logoIdeas.svg" alt="Imagem da logo marca">
+        <nav>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Ideias</a></li>
+            <li><a href="#" onclick="onOff()">Nova Ideia</a></li>
+        </nav>
+    </header>
+
+    <section id="title">
+        <p>Em Exibição</p>
+        <h1>Ideias</h1>
+    </section>
     
-        <section id="intro">
-            <header><img src="logoIdeas.svg" alt=""></header>
-
-            <main>    
-                <p>
-                Uma <strong>pandemia ocorre quando uma doença espalha-se por uma grande quantidade de regiões no globo </strong>, 
-                ou seja, ela não está restrita apenas a uma localidade, estando presente em uma grande área geográfica.
-                </p>
-                <p>
-                Por isso iremos catalogar Ideias para brincadeiras, jogos, filmes, 
-                livros e cursos, tornando esse momento mais interessante
-                </p>
-                <p>
-                Comece clicando em ver ideias para ver as ideias cadastradas
-                </p></main>
-
-            <section id="buttons">
-        
-                <button onclick="onOff()">+ Adicionar Ideia</button>
-               <a class="fat" href="ideias.html">Ver Ideias</a>
-
-            </section>
-
-            <footer id="footer">Com S2 DB - System</footer>
-                   
-        </section>
-    
-        <section id="last-ideas">
+    <main>
+        <section id="ideas">
             <div class="idea">
                 <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953446.svg?token=exp=1614633817~hmac=06afcb0e40166d8f894c3aaf2de0b95d" alt="">
                 <div class="content">
@@ -76,12 +61,23 @@
                     <a href="#"> Ir para ideia</a>    
                 </div>
             </div>
+            <div class="idea">
+                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953249.svg?token=exp=1614718313~hmac=b1eb96aae0f6dc7e4b35b060ae0be5a0" alt="">
+                <div class="content">
+                    <h3>Redes</h3>
+                    <p>Estudo</p>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ut maxime facere facilis assumenda placeat corporis, minima eaque ad architecto harum modi expedita nulla quam impedit, totam accusantium pariatur neque.
+                    </div>
+                    <a href="#"> Ir para ideia</a>    
+                </div>
+            </div>
         </section>
+    </main>
     
+    <footer id="footer">Com S2 DB - System</footer>
     </div>
-    
-    
-    <!--Modal-->
+
     <div id="modal" class="hide">
         <div class="content">
             <h1>Nova Ideia</h1>
@@ -120,9 +116,6 @@
         </div>
     </div>
     
-    
-
-
     <script src="scrips.js"></script>
 </body>
 </html>

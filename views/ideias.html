@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
-</head>
-<body id="page-ideas"> 
-    <div id="container">
-            
+<!--<body id="page-ideas"> -->
+    {% extends 'layout.html' %}
+    
+    
+    {% set bodyId = "page-ideas" %}
+
+    {% block content %}   
     <header>
         <a href="/"><img src="/logoIdeas.svg" alt="Imagem da logo marca"></a>
         
         <nav>
             <li><a href="/">Inicio</a></li>
-            <li><a href="#">Ideias</a></li>
             <li><a href="#" onclick="onOff()">Nova Ideia</a></li>
         </nav>
     </header>
@@ -26,97 +18,14 @@
         <p>Em Exibição</p>
         <h1>Ideias</h1>
     </section>
-    
     <main>
         <section id="ideas">
-            <div class="idea">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953446.svg?token=exp=1614633817~hmac=06afcb0e40166d8f894c3aaf2de0b95d" alt="">
-                <div class="content">
-                    <h3>Cursos de recuperação de dados</h3>
-                    <p>Estudo</p>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ut maxime facere facilis assumenda placeat corporis, minima eaque ad architecto harum modi expedita nulla quam impedit, totam accusantium pariatur neque.
-                    </div>
-                    <a href="#"> Ir para ideia</a>    
-                </div>
-            </div>
-            <div class="idea">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953238.svg?token=exp=1614633817~hmac=be5e9fde81cfbed52b68ad4021164574" alt="">
-                <div class="content">
-                    <h3>Firewall</h3>
-                    <p>Estudo</p>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ut maxime facere facilis assumenda placeat corporis, minima eaque ad architecto harum modi expedita nulla quam impedit, totam accusantium pariatur neque.
-                    </div>
-                    <a href="#"> Ir para ideia</a>    
-                </div>
-            </div>
-            <div class="idea">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953480.svg?token=exp=1614633817~hmac=4acac509fcbbdd0248171696457a3de3" alt="">
-                <div class="content">
-                    <h3>Backup em Nuvem</h3>
-                    <p>Estudo</p>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ut maxime facere facilis assumenda placeat corporis, minima eaque ad architecto harum modi expedita nulla quam impedit, totam accusantium pariatur neque.
-                    </div>
-                    <a href="#"> Ir para ideia</a>    
-                </div>
-            </div>
-            <div class="idea">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/3953/3953249.svg?token=exp=1614718313~hmac=b1eb96aae0f6dc7e4b35b060ae0be5a0" alt="">
-                <div class="content">
-                    <h3>Redes</h3>
-                    <p>Estudo</p>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ut maxime facere facilis assumenda placeat corporis, minima eaque ad architecto harum modi expedita nulla quam impedit, totam accusantium pariatur neque.
-                    </div>
-                    <a href="#"> Ir para ideia</a>    
-                </div>
-            </div>
+            {% include 'all_Ideas.html' %}
         </section>
     </main>
     
-    <footer id="footer">Com S2 DB - System</footer>
-    </div>
-
-    <div id="modal" class="hide">
-        <div class="content">
-            <h1>Nova Ideia</h1>
-            <form action="">
-                
-                <div class="input-wrapper">
-                    <label for="title">Título da Ideia</label>
-                    <input type="text" name="title" id="title">
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="category">Categoria</label>
-                    <input type="text" name="category" id="category">
-                </div>
-                
-                <div class="input-wrapper">
-                    <label for="image">Link da Imagem</label>
-                    <input type="url" name="image" id="image">
-                </div>
-                
-                <div class="input-wrapper">
-                    <label for="description">Digite uma descrição para esta Ideia</label>
-                    <textarea type="text" name="description" cols="30" rows="10"></textarea>
-                </div>
-                
-                <div class="input-wrapper">
-                    <label for="link">Link da Ideia</label>
-                    <input type="url" name="link" id="link">  
-                </div>
-                
-                <a href="#" onclick="onOff()"> Voltar</a>
-
-                <button>Salvar</button>
-            
-            </form>
-        </div>
-    </div>
     
-    <script src="/scrips.js"></script>
-</body>
-</html>
+    <footer id="footer">Com S2 DB - System</footer>
+
+    {% endblock %}   
+

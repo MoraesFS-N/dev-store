@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="charset=UTF-8">
+    {% include 'head.html'%}
+
+</head>
+
+<body id="{{ bodyId }}">
+
+    <div id="container">
+    
+        {% block content %} 
+        {% endblock %}
+
+    </div>
+    
+    {% include 'modal.html' %}
+
+    <script src="scrips.js"></script>
+</body>
+</html>

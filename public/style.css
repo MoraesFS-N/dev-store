@@ -135,6 +135,14 @@ footer{
     color: #17e9deb7;
 }
 
+.idea a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #00F3E5;
+    font-size: 14px;
+    font-weight: 200;
+}
+
 .idea .decription{
     margin: 16px 0;
 
@@ -145,7 +153,7 @@ footer{
     background-color: #00F3E5;
     color: #1e1e1e;
     
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;

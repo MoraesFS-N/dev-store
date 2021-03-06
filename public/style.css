@@ -136,6 +136,10 @@ footer{
 .idea p{
     margin: 8px 0;
     color: #17e9deb7;
+    overflow: hidden;
+    width: 12em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .idea a{

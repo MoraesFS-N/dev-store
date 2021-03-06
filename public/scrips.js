@@ -24,12 +24,9 @@ function checkFields(event) {
                 } 
         });
 
-        if (isEmpty) {
-                
+        if (isEmpty) {        
                 event.preventDefault();
                 
                 alert('Verifique se todos os campos foram preenchidos');
         }
-
-
 }
